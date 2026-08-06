@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – IndX Exchange</title>
+  <meta name="description"
+    content="Reach out to IndX Exchange team. Get support, ask questions, or connect with our crypto experts." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Open+Sans:wght@400;600;700&family=Questrial&display=swap"
+    rel="stylesheet" />
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#227CC9',
+              blueDark: '#1A62A0',
+              blueLight: '#EEF6FF',
+              yellow: '#FFB800',
+              yellowHover: '#E5A500',
+              accentBg: '#F7FAFC'
+            }
+          },
+          fontFamily: {
+            sans: ['Nunito', 'sans-serif'],
+            heading: ['Lexend', 'sans-serif'],
+            lexend: ['Lexend', 'sans-serif'],
+            nunito: ['Nunito', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .header-bg {
+      background-color: #F1F8FF;
+      background-image: url("/images/Rectangle-747.jpg");
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+    }
+
+    label {
+      font-family: "Open Sans", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 20.4px;
+    }
+  </style>
+</head>
+
+<body class="font-sans text-[#262626] bg-white antialiased selection:bg-brand-yellow selection:text-slate-900 flex flex-col min-h-screen">
+
+  <!-- TOP NAVIGATION HEADER -->
+  <header
+    class="header-bg sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
+      <!-- LOGO -->
+      <a href="index.html" class="block">
+        <img src="images/Indx-without-dash-1536x458.png" alt="IndX Exchange Logo"
+          class="w-full max-w-[120px] lg:max-w-[120px] h-auto object-contain" />
+      </a>
+
+      <!-- DESKTOP NAV + DOWNLOAD BUTTON -->
+      <div class="hidden md:flex items-center gap-8">
+
+        <!-- NAV LINKS -->
+        <nav class="flex items-center gap-9">
+          <a href="index.html"
+            class="font-['Nunito'] font-bold text-[16px] leading-[28.8px] text-[#262626] hover:text-[#227CC9] transition-colors">
+            Home
+          </a>
+
+          <a href="about.html"
+            class="font-['Nunito'] font-bold text-[16px] leading-[28.8px] text-[#262626] hover:text-[#227CC9] transition-colors">
+            About Us
+          </a>
+
+          <a href="contactus.html"
+            class="font-['Nunito'] font-bold text-[16px] leading-[28.8px] text-[#227CC9] transition-colors">
+            Contact Us
+          </a>
+        </nav>
+
+        <!-- DOWNLOAD CTA BUTTON -->
+        <button onclick="openDownloadModal()"
+          class="relative inline-flex items-center gap-2 bg-[#FFB800] hover:bg-[#E5A500] text-white font-['Nunito'] font-bold text-[16px] leading-[28.8px] px-6 py-2.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer group">
+          <span>Download</span>
+          <i class="fa-solid fa-download text-sm group-hover:translate-y-0.5 transition-transform"></i>
+        </button>
+
+      </div>
+
+      <!-- MOBILE HAMBURGER BUTTON -->
+      <button id="mobile-menu-btn" class="md:hidden text-[#262626] hover:text-[#227CC9] p-2 focus:outline-none"
+        aria-label="Toggle menu">
+        <i class="fa-solid fa-bars text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- MOBILE MENU DRAWER -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-5 shadow-xl">
+      <div class="flex flex-col gap-4">
+        <a href="index.html" class="mobile-nav-link font-['Nunito'] text-lg font-bold text-slate-700 hover:text-[#227CC9]">Home</a>
+        <a href="about.html" class="mobile-nav-link font-['Nunito'] text-lg font-bold text-slate-700 hover:text-[#227CC9]">About Us</a>
+        <a href="contactus.html" class="mobile-nav-link font-['Nunito'] text-lg font-bold text-[#227CC9]">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow py-8 lg:py-8 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+      <!-- TOP SECTION HEADER -->
+      <div class="text-center max-w-3xl mx-auto space-y-1">
+        <h1 class="font-['Lexend'] text-[35px] font-bold text-[#262626] tracking-tight">
+          Reach Out To Us
+        </h1>
+        
+        <h2 class="font-['Lexend'] text-[20px] font-bold text-[#227CC9]">
+          Let’s Team Up For Your Financial Success!
+        </h2>
+
+        <p class="font-['Nunito'] text-[16px] text-[#81859E] font-semibold   leading-normal max-w-2xl mx-auto">
+          We appreciate your interest and are committed to offering great support in the world of cryptocurrencies. If you have questions, feedback, or need help, we’ve got your back. Click to connect with our team of crypto experts using our contact form, and we’ll quickly respond to your queries.
+        </p>
+      </div>
+
+      <!-- MAIN CONTENT: FORM LEFT + ILLUSTRATION RIGHT -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch max-w-6xl mx-auto">
+
+        <!-- LEFT COLUMN: CONTACT FORM -->
+        <div class="lg:col-span-6 bg-white border border-slate-200/80 rounded-[4px] p-4 sm:p-4 shadow-sm flex flex-col justify-between">
+          <form onsubmit="handleFormSubmit(event)" class="space-y-5">
+            
+            <!-- First Name -->
+            <div class="space-y-1.5">
+              <label class="block font-['Open_Sans'] font-bold text-[12px] leading-[20.4px] text-slate-700">
+                First Name <span class="text-red-500">*</span>
+              </label>
+              <input type="text" required placeholder=""
+                class="w-full border border-slate-200 rounded-lg px-3.5 py-2.5 text-sm text-slate-800 focus:outline-none focus:border-[#227CC9] focus:ring-1 focus:ring-[#227CC9] transition-all" />
+            </div>
+
+            <!-- Email Address -->
+            <div class="space-y-1.5">
+              <label class="block font-['Open_Sans'] font-bold text-[12px] leading-[20.4px] text-slate-700">
+                Email Address <span class="text-red-500">*</span>
+              </label>
+              <input type="email" required placeholder=""
+                class="w-full border border-slate-200 rounded-lg px-3.5 py-2.5 text-sm text-slate-800 focus:outline-none focus:border-[#227CC9] focus:ring-1 focus:ring-[#227CC9] transition-all" />
+            </div>
+
+            <!-- Phone Number -->
+            <div class="space-y-1.5">
+              <label class="block font-['Open_Sans'] font-bold text-[12px] leading-[20.4px] text-slate-700">
+                Phone Number <span class="text-red-500">*</span>
+              </label>
+              <input type="tel" required placeholder=""
+                class="w-full border border-slate-200 rounded-lg px-3.5 py-2.5 text-sm text-slate-800 focus:outline-none focus:border-[#227CC9] focus:ring-1 focus:ring-[#227CC9] transition-all" />
+            </div>
+
+            <!-- Message -->
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between">
+                <label class="block font-['Open_Sans'] font-bold text-[12px] leading-[20.4px] text-slate-700">
+                  Message
+                </label>
+                <span id="char-counter" class="font-['Nunito'] text-[11px] text-slate-400 font-medium">0 / 180</span>
+              </div>
+              <textarea id="message-input" rows="5" maxlength="180" oninput="updateCharCounter(this)" placeholder=""
+                class="w-full border border-slate-200 rounded-lg p-3.5 text-sm text-slate-800 focus:outline-none focus:border-[#227CC9] focus:ring-1 focus:ring-[#227CC9] transition-all resize-none"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="pt-2">
+              <button type="submit"
+                class="bg-[#EAEAEA] hover:bg-slate-300 text-slate-700 font-['Nunito'] font-bold text-xs sm:text-sm px-6 py-2.5 rounded-lg transition-colors cursor-pointer">
+                Submit
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- RIGHT COLUMN: 3D MAN IN CHAIR ILLUSTRATION CARD -->
+        <div class="lg:col-span-6 bg-[#E8F3FF] rounded-2xl flex items-center justify-center min-h-[300px] shadow-sm">
+          <img src="images/man-sitting-modern-round-chair-with-laptop-isolated-white-removebg-preview.png"
+            alt="Reach Out To Us"
+            style="margin: 0px 0px 40px 0px;"
+            class="w-full max-w-[340px] sm:max-w-[380px] h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-300" />
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#D4E5FE] text-slate-800 py-8 border-t border-sky-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+
+        <!-- LOGO & SLOGAN -->
+        <div class="flex flex-col items-center md:items-start text-center md:text-left">
+          <a href="index.html" class="inline-block">
+            <img src="images/Indx-without-dash-1536x458.png" alt="IndX Logo"
+              class="h-10 sm:h-12 w-auto object-contain" />
+          </a>
+          <p class="font-['Nunito'] font-extrabold text-[#1E293B] text-sm sm:text-base mt-1.5 tracking-tight">
+            India Ka Apna Wallet
+          </p>
+        </div>
+
+        <!-- RIGHT SIDE: SOCIAL ICONS & NAV LINKS -->
+        <div class="flex flex-col items-center md:items-end gap-3">
+
+          <!-- CIRCULAR COLORED SOCIAL ICONS -->
+          <div class="flex items-center gap-2.5">
+            <a href="#" aria-label="Facebook"
+              class="w-7 h-7 rounded-full bg-[#3B5998] hover:opacity-90 text-white flex items-center justify-center text-xs transition-opacity">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="Twitter"
+              class="w-7 h-7 rounded-full bg-[#1DA1F2] hover:opacity-90 text-white flex items-center justify-center text-xs transition-opacity">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#" aria-label="YouTube"
+              class="w-7 h-7 rounded-full bg-[#FF0000] hover:opacity-90 text-white flex items-center justify-center text-xs transition-opacity">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="#" aria-label="Instagram"
+              class="w-7 h-7 rounded-full bg-[#000000] hover:opacity-90 text-white flex items-center justify-center text-xs transition-opacity">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" aria-label="Pinterest"
+              class="w-7 h-7 rounded-full bg-[#BD081C] hover:opacity-90 text-white flex items-center justify-center text-xs transition-opacity">
+              <i class="fa-brands fa-pinterest-p"></i>
+            </a>
+          </div>
+
+          <!-- FOOTER LINKS -->
+          <div
+            class="flex flex-wrap justify-center md:justify-end gap-4 sm:gap-6 font-['Questrial'] font-medium text-[16px] leading-[28.8px] text-[#190C2D]">
+            <a href="index.html" class="hover:text-[#227CC9] transition-colors">Home</a>
+            <a href="about.html" class="hover:text-[#227CC9] transition-colors">About Us</a>
+            <a href="contactus.html" class="hover:text-[#227CC9] transition-colors">Contact Us</a>
+            <a href="#" class="hover:text-[#227CC9] transition-colors">Whitepaper</a>
+            <a href="#" class="hover:text-[#227CC9] transition-colors">Privacy Policy</a>
+            <a href="#" class="hover:text-[#227CC9] transition-colors">Terms &amp; Conditions</a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING SCROLL TO TOP BUTTON -->
+  <a href="#top" aria-label="Scroll to top"
+    class="fixed bottom-6 right-6 z-40 w-9 h-9 bg-slate-500/90 hover:bg-slate-700 text-white rounded shadow-md flex items-center justify-center transition-all">
+    <i class="fa-solid fa-angle-up text-sm"></i>
+  </a>
+
+  <!-- DOWNLOAD MODAL -->
+  <div id="download-modal"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm hidden transition-opacity duration-200">
+    <div
+      class="modal-content relative bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full mx-4 shadow-2xl transform scale-95 opacity-0 transition-all duration-200">
+
+      <!-- Close Button -->
+      <button onclick="closeDownloadModal()"
+        class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center transition-colors">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+
+      <div class="text-center space-y-3 mb-6">
+        <div class="w-12 h-12 bg-sky-50 rounded-2xl flex items-center justify-center mx-auto text-[#227CC9] text-2xl">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+        </div>
+        <h3 class="font-['Lexend'] text-2xl font-bold text-slate-900">Download IndX App</h3>
+        <p class="font-['Nunito'] text-sm text-slate-500 font-medium">Choose your platform to get started</p>
+      </div>
+
+      <!-- App Download Options -->
+      <div class="space-y-3 font-['Nunito']">
+        <a href="#"
+          class="flex items-center justify-between p-4 bg-slate-50 hover:bg-sky-50 border border-slate-200 hover:border-[#227CC9]/30 rounded-2xl transition-all group">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center text-xl">
+              <i class="fa-brands fa-google-play"></i>
+            </div>
+            <div class="text-left">
+              <p class="text-xs text-slate-500 font-medium">GET IT ON</p>
+              <p class="text-base font-bold text-slate-900 group-hover:text-[#227CC9]">Google Play Store</p>
+            </div>
+          </div>
+          <i class="fa-solid fa-download text-slate-400 group-hover:text-[#227CC9]"></i>
+        </a>
+
+        <a href="#"
+          class="flex items-center justify-between p-4 bg-slate-50 hover:bg-sky-50 border border-slate-200 hover:border-[#227CC9]/30 rounded-2xl transition-all group">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center text-xl">
+              <i class="fa-brands fa-apple"></i>
+            </div>
+            <div class="text-left">
+              <p class="text-xs text-slate-500 font-medium">Download on the</p>
+              <p class="text-base font-bold text-slate-900 group-hover:text-[#227CC9]">App Store</p>
+            </div>
+          </div>
+          <i class="fa-solid fa-download text-slate-400 group-hover:text-[#227CC9]"></i>
+        </a>
+
+        <a href="#"
+          class="flex items-center justify-between p-4 bg-amber-50 hover:bg-amber-100 border border-amber-200 rounded-2xl transition-all group">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-xl bg-[#FFB800] text-slate-900 flex items-center justify-center text-xl">
+              <i class="fa-solid fa-android"></i>
+            </div>
+            <div class="text-left">
+              <p class="text-xs text-amber-700 font-medium">DIRECT APK</p>
+              <p class="text-base font-bold text-slate-900">Android APK Download</p>
+            </div>
+          </div>
+          <i class="fa-solid fa-arrow-down-long text-amber-600"></i>
+        </a>
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-slate-100 text-center">
+        <p class="text-xs text-slate-400 font-['Nunito']">Scan QR Code or visit indx-exchange.com on mobile</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Character Counter for Message input
+    function updateCharCounter(textarea) {
+      const counter = document.getElementById('char-counter');
+      counter.textContent = `${textarea.value.length} / 180`;
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      alert('Thank you for contacting us! Our team will get back to you shortly.');
+      e.target.reset();
+      document.getElementById('char-counter').textContent = '0 / 180';
+    }
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Download Modal Logic
+    const downloadModal = document.getElementById('download-modal');
+    const modalContent = downloadModal.querySelector('.modal-content');
+
+    function openDownloadModal() {
+      downloadModal.classList.remove('hidden');
+      setTimeout(() => {
+        modalContent.classList.remove('scale-95', 'opacity-0');
+        modalContent.classList.add('scale-100', 'opacity-100');
+      }, 10);
+    }
+
+    function closeDownloadModal() {
+      modalContent.classList.remove('scale-100', 'opacity-100');
+      modalContent.classList.add('scale-95', 'opacity-0');
+      setTimeout(() => {
+        downloadModal.classList.add('hidden');
+      }, 200);
+    }
+
+    downloadModal.addEventListener('click', (e) => {
+      if (e.target === downloadModal) {
+        closeDownloadModal();
+      }
+    });
+  </script>
+</body>
+
+</html>

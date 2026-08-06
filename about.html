@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us – IndX Exchange</title>
+  <meta name="description"
+    content="Learn about IndX Exchange - India's most trusted crypto exchange providing seamless USDT crypto experience." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Open+Sans:wght@400;600;700&family=Questrial&display=swap"
+    rel="stylesheet" />
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#227CC9',
+              blueDark: '#1A62A0',
+              blueLight: '#EEF6FF',
+              yellow: '#FFB800',
+              yellowHover: '#E5A500',
+              accentBg: '#F7FAFC'
+            }
+          },
+          fontFamily: {
+            sans: ['Nunito', 'sans-serif'],
+            heading: ['Lexend', 'sans-serif'],
+            lexend: ['Lexend', 'sans-serif'],
+            nunito: ['Nunito', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Hexagon / Grid background pattern */
+    .bg-hexagon-pattern {
+      background-color: #F4F8FC;
+    }
+
+    .header-bg {
+      background-color: #F1F8FF;
+      background-image: url("/images/Rectangle-747.jpg");
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+    }
+
+    /* Tech Network Dark Blue Background */
+    .bg-tech-network {
+      background-color: #1A60B0;
+      background-image: 
+        radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+        linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+      background-size: 30px 30px, 30px 30px, 30px 30px;
+    }
+  </style>
+</head>
+
+<body class="font-sans text-[#262626] bg-white antialiased selection:bg-brand-yellow selection:text-slate-900 flex flex-col min-h-screen">
+
+  <!-- TOP NAVIGATION HEADER -->
+  <header
+    class=" header-bg sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
+      <!-- LOGO -->
+      <a href="index.html" class="block">
+        <img src="images/Indx-without-dash-1536x458.png" alt="IndX Exchange Logo"
+          class="w-full max-w-[120px] lg:max-w-[120px] h-auto object-contain" />
+      </a>
+
+      <!-- DESKTOP NAV + DOWNLOAD BUTTON -->
+      <div class="hidden md:flex items-center gap-8">
+
+        <!-- NAV LINKS -->
+        <nav class="flex items-center gap-9">
+          <a href="index.html"
+            class="font-['Nunito'] font-bold text-[16px] leading-[28.8px] text-[#262626] hover:text-[#227CC9] transition-colors">
+            Home
+          </a>
+
+          <a href="about.html"
+            class="font-['Nunito'] font-bold text-[16px] leading-[28.8px] text-[#227CC9] transition-colors">
+            About Us
+          </a>
+
+          <a href="contactus.html"
+            class="font-['Nunito'] font-bold text-[16px] leading-[28.8px] text-[#262626] hover:text-[#227CC9] transition-colors">
+            Contact Us
+          </a>
+        </nav>
+
+        <!-- DOWNLOAD CTA BUTTON -->
+        <button onclick="openDownloadModal()"
+          class="relative inline-flex items-center gap-2 bg-[#FFB800] hover:bg-[#E5A500] text-white font-['Nunito'] font-bold text-[16px] leading-[28.8px] px-6 py-2.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer group">
+          <span>Download</span>
+          <i class="fa-solid fa-download text-sm group-hover:translate-y-0.5 transition-transform"></i>
+        </button>
+
+      </div>
+
+      <!-- MOBILE HAMBURGER BUTTON -->
+      <button id="mobile-menu-btn" class="md:hidden text-[#262626] hover:text-[#227CC9] p-2 focus:outline-none"
+        aria-label="Toggle menu">
+        <i class="fa-solid fa-bars text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- MOBILE MENU DRAWER -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-5 shadow-xl">
+      <div class="flex flex-col gap-4">
+        <a href="index.html" class="mobile-nav-link font-['Nunito'] text-lg font-bold text-slate-700 hover:text-[#227CC9]">Home</a>
+        <a href="about.html" class="mobile-nav-link font-['Nunito'] text-lg font-bold text-[#227CC9]">About Us</a>
+        <a href="contactus.html"
+          class="mobile-nav-link font-['Nunito'] text-lg font-bold text-slate-700 hover:text-[#227CC9]">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- SECTION 1: HERO SECTION -->
+    <section class="relative pt-8 pb-12 lg:pt-16 lg:pb-24 bg-hexagon-pattern overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center text-center lg:text-left">
+
+          <!-- LEFT TEXT COLUMN -->
+          <div class="lg:col-span-6 space-y-5">
+            <h1 class="font-['Lexend'] text-[26px] sm:text-5xl lg:text-[52px] font-bold leading-[1.2] tracking-tight">
+              <span class="text-[#262626] block">Experience</span>
+              <span class="text-[#227CC9] block">Swift And Secure</span>
+              <span class="text-[#227CC9] block">Cryptocurrency Trading</span>
+            </h1>
+
+            <div class="pt-2 flex justify-center lg:justify-start">
+              <button onclick="openDownloadModal()"
+                class="inline-flex items-center gap-2 bg-[#FFB800] hover:bg-[#E5A500] text-white font-['Nunito'] font-bold text-[16px] px-8 py-3 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5 cursor-pointer">
+                <span>Get Started</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- RIGHT IMAGE COLUMN -->
+          <div class="lg:col-span-6 flex justify-center items-center">
+            <img src="images/About-Us_Image.webp" alt="Swift And Secure Cryptocurrency Trading"
+              class="w-full max-w-[280px] sm:max-w-md lg:max-w-xl h-auto object-contain drop-shadow-xl" loading="eager" />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: OUR COMMITMENT (FAST AND SECURE CRYPTO TRADING) -->
+    <section class="py-12 lg:py-24 bg-hexagon-pattern border-t border-slate-100/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center text-center lg:text-left">
+
+          <!-- RIGHT CONTENT (ORDER 1 ON MOBILE) -->
+          <div class="lg:col-span-6 space-y-4 order-1 lg:order-2">
+            <p class="font-['Nunito'] text-sm font-semibold text-slate-500 uppercase tracking-wider">
+              Our Commitment
+            </p>
+
+            <h2 class="font-['Lexend'] text-[26px] sm:text-4xl lg:text-[42px] font-bold leading-tight">
+              <span class="text-[#262626]">Fast And Secure</span><br />
+              <span class="text-[#227CC9]">Crypto Trading</span>
+            </h2>
+
+            <p class="font-['Nunito'] text-sm sm:text-base text-slate-500 font-normal leading-relaxed">
+              In the realm of cryptocurrency, trading demands a blend of speed and trust. Here at our platform, we recognize the critical role security plays in crypto trading. That's why we give top priority, ensuring the protection of your personal and financial information. When we assure you that your funds are secure, it's a commitment we take seriously. On our reliable platform, you can enjoy swift and efficient transactions, empowering you to engage in trading with unwavering confidence.
+            </p>
+          </div>
+
+          <!-- LEFT 3D WALLET IMAGE (ORDER 2 ON MOBILE) -->
+          <div class="lg:col-span-6 flex justify-center order-2 lg:order-1">
+            <img src="images/cryptocurrency-wallet-4307584-3581353.webp" alt="Fast And Secure Crypto Trading"
+              class="w-full max-w-[240px] sm:max-w-md h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-300" />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: OUR MISSION, VISION & VALUES -->
+    <section class="py-12 lg:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- TITLE -->
+        <div class="text-center mb-8 sm:mb-16">
+          <h2 class="font-['Lexend'] text-[26px] sm:text-4xl lg:text-[44px] font-bold text-[#227CC9]">
+            Our Mission, Vision &amp; Values
+          </h2>
+        </div>
+
+        <!-- 3 CARDS GRID -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+
+          <!-- CARD 1 -->
+          <div class="relative bg-gradient-to-b from-sky-50/70 to-slate-50 border border-slate-100 rounded-3xl p-7 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden group text-left">
+            <span class="absolute top-4 right-6 font-['Lexend'] font-bold text-6xl text-sky-100/80 select-none group-hover:text-sky-200/80 transition-colors">01</span>
+            <img src="images/Check-q69frhs8e9s4reboeo2ix3y1xb9a5komthdos0sdt4.png" alt="Check Icon" class="w-10 h-10 object-contain mb-4 relative z-10" />
+            <h3 class="font-['Lexend'] font-bold text-lg sm:text-xl text-slate-800 mb-2 relative z-10">
+              Seamless Experience
+            </h3>
+            <p class="font-['Nunito'] text-sm text-slate-500 font-normal leading-relaxed relative z-10">
+              Enjoy a hassle-free journey with our user-friendly platform.
+            </p>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="relative bg-gradient-to-b from-sky-50/70 to-slate-50 border border-slate-100 rounded-3xl p-7 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden group text-left">
+            <span class="absolute top-4 right-6 font-['Lexend'] font-bold text-6xl text-sky-100/80 select-none group-hover:text-sky-200/80 transition-colors">02</span>
+            <img src="images/Check-q69frhs8e9s4reboeo2ix3y1xb9a5komthdos0sdt4.png" alt="Check Icon" class="w-10 h-10 object-contain mb-4 relative z-10" />
+            <h3 class="font-['Lexend'] font-bold text-lg sm:text-xl text-slate-800 mb-2 relative z-10">
+              Fast Withdrawals with No Extra Fee
+            </h3>
+            <p class="font-['Nunito'] text-sm text-slate-500 font-normal leading-relaxed relative z-10">
+              Swift transactions with no additional charges for your convenience.
+            </p>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="relative bg-gradient-to-b from-sky-50/70 to-slate-50 border border-slate-100 rounded-3xl p-7 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden group text-left">
+            <span class="absolute top-4 right-6 font-['Lexend'] font-bold text-6xl text-sky-100/80 select-none group-hover:text-sky-200/80 transition-colors">03</span>
+            <img src="images/Check-q69frhs8e9s4reboeo2ix3y1xb9a5komthdos0sdt4.png" alt="Check Icon" class="w-10 h-10 object-contain mb-4 relative z-10" />
+            <h3 class="font-['Lexend'] font-bold text-lg sm:text-xl text-slate-800 mb-2 relative z-10">
+              24/7 Support and Security
+            </h3>
+            <p class="font-['Nunito'] text-sm text-slate-500 font-normal leading-relaxed relative z-10">
+              Rest easy with round-the-clock support and robust security measures.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: ABOUT US BANNER -->
+    <section class="py-12 lg:py-20 bg-tech-network text-white relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 relative z-10">
+        <h2 class="font-['Lexend'] text-[26px] sm:text-4xl lg:text-[44px] font-bold text-white">
+          About Us
+        </h2>
+        <p class="font-['Nunito'] text-sm sm:text-base text-sky-100/90 font-medium leading-relaxed max-w-3xl mx-auto">
+          We're a reliable platform that focuses on exchanging USDT and USDC in the world of cryptocurrency. Our goal is to provide excellent service, making crypto trading easy for you. Our platform is made with a user-friendly design, and we're here to help you in multiple languages. We're dedicated to making your cryptocurrency experience the best it can be!
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 5: WHAT WE DO? ONE APP UNLIMITED PROFITS -->
+    <section class="py-12 lg:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center text-center lg:text-left">
+
+          <!-- CONTENT (ORDER 1 ON MOBILE) -->
+          <div class="lg:col-span-6 space-y-5 order-1 lg:order-2">
+            <p class="font-['Nunito'] text-sm font-semibold text-slate-500 uppercase tracking-wider">
+              What We Do?
+            </p>
+
+            <h2 class="font-['Lexend'] text-[26px] sm:text-4xl lg:text-[42px] font-bold leading-tight">
+              <span class="text-[#262626]">One App</span><br />
+              <span class="text-[#227CC9]">Unlimited Profits</span>
+            </h2>
+
+            <p class="font-['Nunito'] text-sm sm:text-base text-slate-500 font-normal leading-relaxed">
+              New to crypto? No problem. Start with exchanging crypto for as little, and grow your skills as you go and you'll have us to guide you through the process. No stupid questions. No sleepless nights. Have confidence in your crypto.
+            </p>
+
+            <div class="pt-2 flex justify-center lg:justify-start">
+              <button onclick="openDownloadModal()"
+                class="inline-flex items-center gap-2 bg-[#FFB800] hover:bg-[#E5A500] text-white font-['Nunito'] font-bold text-[16px] px-7 py-3 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5 cursor-pointer group">
+                <span>Download</span>
+                <i class="fa-solid fa-download text-sm group-hover:translate-y-0.5 transition-transform"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- IMAGE (ORDER 2 ON MOBILE) -->
+          <div class="lg:col-span-6 flex justify-center order-2 lg:order-1">
+            <img src="images/3260113_4-removebg-preview.png" alt="One App Unlimited Profits"
+              class="w-full max-w-[240px] sm:max-w-md h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-300" />
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#D4E5FE] text-slate-800 py-8 border-t border-sky-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+
+        <!-- LOGO & SLOGAN -->
+        <div class="flex flex-col items-center md:items-start text-center md:text-left">
+          <a href="index.html" class="inline-block">
+            <img src="images/Indx-without-dash-1536x458.png" alt="IndX Logo"
+              class="h-10 sm:h-12 w-auto object-contain" />
+          </a>
+          <p class="font-['Nunito'] font-extrabold text-[#1E293B] text-sm sm:text-base mt-1.5 tracking-tight">
+            India Ka Apna Wallet
+          </p>
+        </div>
+
+        <!-- RIGHT SIDE: SOCIAL ICONS & NAV LINKS -->
+        <div class="flex flex-col items-center md:items-end gap-3">
+
+          <!-- CIRCULAR COLORED SOCIAL ICONS -->
+          <div class="flex items-center gap-2.5">
+            <a href="#" aria-label="Facebook"
+              class="w-7 h-7 rounded-full bg-[#3B5998] hover:opacity-90 text-white flex items-center justify-center text-xs transition-opacity">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="Twitter"
+              class="w-7 h-7 rounded-full bg-[#1DA1F2] hover:opacity-90 text-white flex items-center justify-center text-xs transition-opacity">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#" aria-label="YouTube"
+              class="w-7 h-7 rounded-full bg-[#FF0000] hover:opacity-90 text-white flex items-center justify-center text-xs transition-opacity">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="#" aria-label="Instagram"
+              class="w-7 h-7 rounded-full bg-[#000000] hover:opacity-90 text-white flex items-center justify-center text-xs transition-opacity">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" aria-label="Pinterest"
+              class="w-7 h-7 rounded-full bg-[#BD081C] hover:opacity-90 text-white flex items-center justify-center text-xs transition-opacity">
+              <i class="fa-brands fa-pinterest-p"></i>
+            </a>
+          </div>
+
+          <!-- FOOTER LINKS -->
+          <div
+            class="flex flex-wrap justify-center md:justify-end gap-4 sm:gap-6 font-['Questrial'] font-medium text-[16px] leading-[28.8px] text-[#190C2D]">
+            <a href="index.html" class="hover:text-[#227CC9] transition-colors">Home</a>
+            <a href="about.html" class="hover:text-[#227CC9] transition-colors">About Us</a>
+            <a href="contactus.html" class="hover:text-[#227CC9] transition-colors">Contact Us</a>
+            <a href="#" class="hover:text-[#227CC9] transition-colors">Whitepaper</a>
+            <a href="#" class="hover:text-[#227CC9] transition-colors">Privacy Policy</a>
+            <a href="#" class="hover:text-[#227CC9] transition-colors">Terms &amp; Conditions</a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING SCROLL TO TOP BUTTON -->
+  <a href="#top" aria-label="Scroll to top"
+    class="fixed bottom-6 right-6 z-40 w-9 h-9 bg-slate-500/90 hover:bg-slate-700 text-white rounded shadow-md flex items-center justify-center transition-all">
+    <i class="fa-solid fa-angle-up text-sm"></i>
+  </a>
+
+  <!-- DOWNLOAD MODAL -->
+  <div id="download-modal"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm hidden transition-opacity duration-200">
+    <div
+      class="modal-content relative bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full mx-4 shadow-2xl transform scale-95 opacity-0 transition-all duration-200">
+
+      <!-- Close Button -->
+      <button onclick="closeDownloadModal()"
+        class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center transition-colors">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+
+      <div class="text-center space-y-3 mb-6">
+        <div class="w-12 h-12 bg-sky-50 rounded-2xl flex items-center justify-center mx-auto text-[#227CC9] text-2xl">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+        </div>
+        <h3 class="font-['Lexend'] text-2xl font-bold text-slate-900">Download IndX App</h3>
+        <p class="font-['Nunito'] text-sm text-slate-500 font-medium">Choose your platform to get started</p>
+      </div>
+
+      <!-- App Download Options -->
+      <div class="space-y-3 font-['Nunito']">
+        <a href="#"
+          class="flex items-center justify-between p-4 bg-slate-50 hover:bg-sky-50 border border-slate-200 hover:border-[#227CC9]/30 rounded-2xl transition-all group">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center text-xl">
+              <i class="fa-brands fa-google-play"></i>
+            </div>
+            <div class="text-left">
+              <p class="text-xs text-slate-500 font-medium">GET IT ON</p>
+              <p class="text-base font-bold text-slate-900 group-hover:text-[#227CC9]">Google Play Store</p>
+            </div>
+          </div>
+          <i class="fa-solid fa-download text-slate-400 group-hover:text-[#227CC9]"></i>
+        </a>
+
+        <a href="#"
+          class="flex items-center justify-between p-4 bg-slate-50 hover:bg-sky-50 border border-slate-200 hover:border-[#227CC9]/30 rounded-2xl transition-all group">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center text-xl">
+              <i class="fa-brands fa-apple"></i>
+            </div>
+            <div class="text-left">
+              <p class="text-xs text-slate-500 font-medium">Download on the</p>
+              <p class="text-base font-bold text-slate-900 group-hover:text-[#227CC9]">App Store</p>
+            </div>
+          </div>
+          <i class="fa-solid fa-download text-slate-400 group-hover:text-[#227CC9]"></i>
+        </a>
+
+        <a href="#"
+          class="flex items-center justify-between p-4 bg-amber-50 hover:bg-amber-100 border border-amber-200 rounded-2xl transition-all group">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-xl bg-[#FFB800] text-slate-900 flex items-center justify-center text-xl">
+              <i class="fa-solid fa-android"></i>
+            </div>
+            <div class="text-left">
+              <p class="text-xs text-amber-700 font-medium">DIRECT APK</p>
+              <p class="text-base font-bold text-slate-900">Android APK Download</p>
+            </div>
+          </div>
+          <i class="fa-solid fa-arrow-down-long text-amber-600"></i>
+        </a>
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-slate-100 text-center">
+        <p class="text-xs text-slate-400 font-['Nunito']">Scan QR Code or visit indx-exchange.com on mobile</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Download Modal Logic
+    const downloadModal = document.getElementById('download-modal');
+    const modalContent = downloadModal.querySelector('.modal-content');
+
+    function openDownloadModal() {
+      downloadModal.classList.remove('hidden');
+      setTimeout(() => {
+        modalContent.classList.remove('scale-95', 'opacity-0');
+        modalContent.classList.add('scale-100', 'opacity-100');
+      }, 10);
+    }
+
+    function closeDownloadModal() {
+      modalContent.classList.remove('scale-100', 'opacity-100');
+      modalContent.classList.add('scale-95', 'opacity-0');
+      setTimeout(() => {
+        downloadModal.classList.add('hidden');
+      }, 200);
+    }
+
+    downloadModal.addEventListener('click', (e) => {
+      if (e.target === downloadModal) {
+        closeDownloadModal();
+      }
+    });
+  </script>
+</body>
+
+</html>
