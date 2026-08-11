@@ -1,0 +1,22 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Base Directory
+RewriteBase /
+
+# 1. Direct access to existing .html files (Ensures .html pages open properly)
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule \.html$ - [L]
+
+# 2. Allow accessing .html files without typing .html in URL (Clean URLs)
+# Example: indxexchange.in/about -> loads about.html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
+
+# 3. Security & Optimization Settings
+# Prevent Directory Browsing
+Options -Indexes
+
+# UTF-8 Encoding
+AddDefaultCharset UTF-8
