@@ -225,11 +225,11 @@
           class="w-full max-w-[120px] lg:max-w-[120px] h-auto object-contain" />
       </a>
 
-      <!-- DESKTOP NAV + DOWNLOAD BUTTON -->
-      <div class="hidden md:flex items-center gap-8">
+      <!-- DESKTOP NAV + ACTIONS -->
+      <div class="hidden md:flex items-center gap-6 lg:gap-8">
 
         <!-- NAV LINKS -->
-        <nav class="flex items-center gap-9">
+        <nav class="flex items-center gap-6 lg:gap-9">
           <a href="#home"
             class="font-['Nunito'] font-bold text-[16px] leading-[28.8px] text-[#1262FF] hover:text-brand-blueDark transition-colors">
             Home
@@ -246,12 +246,21 @@
           </a>
         </nav>
 
-        <!-- DOWNLOAD CTA BUTTON -->
-        <button onclick="openDownloadModal()"
-          class="relative inline-flex items-center gap-2 bg-[#FFB800] hover:bg-[#E5A500] text-white font-['Nunito'] font-bold text-[16px] leading-[28.8px] px-6 py-2.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer group">
-          <span>Download</span>
-          <i class="fa-solid fa-download text-sm group-hover:translate-y-0.5 transition-transform"></i>
-        </button>
+        <div class="flex items-center gap-3">
+          <!-- DOWNLOAD CTA BUTTON -->
+          <button onclick="openDownloadModal()"
+            class="relative inline-flex items-center gap-2 bg-[#FFB800] hover:bg-[#E5A500] text-white font-['Nunito'] font-bold text-[16px] leading-[28.8px] px-6 py-2.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer group">
+            <span>Download</span>
+            <i class="fa-solid fa-download text-sm group-hover:translate-y-0.5 transition-transform"></i>
+          </button>
+
+          <!-- TELEGRAM ICON BUTTON -->
+          <a href="https://t.me/indxexchange" target="_blank" rel="noopener noreferrer"
+            aria-label="Telegram" title="Join us on Telegram"
+            class="inline-flex items-center justify-center w-11 h-11 rounded-full shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer flex-shrink-0">
+            <img src="images/telegram.png" alt="Telegram" class="w-11 h-11 object-contain rounded-full" />
+          </a>
+        </div>
 
       </div>
 
@@ -270,6 +279,19 @@
           class="mobile-nav-link font-['Nunito'] text-lg font-bold text-slate-700 hover:text-[#227CC9]">About Us</a>
         <a href="contactus.html"
           class="mobile-nav-link font-['Nunito'] text-lg font-bold text-slate-700 hover:text-[#227CC9]">Contact Us</a>
+
+        <div class="pt-2 flex items-center gap-3 border-t border-slate-100">
+          <button onclick="openDownloadModal()"
+            class="flex-1 inline-flex items-center justify-center gap-2 bg-[#FFB800] hover:bg-[#E5A500] text-white font-['Nunito'] font-bold text-[16px] py-2.5 rounded-xl shadow-md">
+            <span>Download</span>
+            <i class="fa-solid fa-download text-sm"></i>
+          </button>
+          <a href="https://t.me/indxexchange" target="_blank" rel="noopener noreferrer"
+            aria-label="Telegram" title="Join us on Telegram"
+            class="inline-flex items-center justify-center w-11 h-11 rounded-full shadow-md flex-shrink-0">
+            <img src="images/telegram.png" alt="Telegram" class="w-11 h-11 object-contain rounded-full" />
+          </a>
+        </div>
       </div>
     </div>
   </header>
@@ -1053,6 +1075,10 @@
 
           <!-- CIRCULAR COLORED SOCIAL ICONS -->
           <div class="flex items-center gap-2.5">
+            <a href="https://t.me/indxexchange" target="_blank" rel="noopener noreferrer" aria-label="Telegram"
+              class="w-7 h-7 rounded-full bg-[#229ED9] hover:opacity-90 text-white flex items-center justify-center text-xs transition-opacity">
+              <i class="fa-brands fa-telegram"></i>
+            </a>
             <a href="#" aria-label="Facebook"
               class="w-7 h-7 rounded-full bg-[#3B5998] hover:opacity-90 text-white flex items-center justify-center text-xs transition-opacity">
               <i class="fa-brands fa-facebook-f"></i>
